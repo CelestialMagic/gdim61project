@@ -234,6 +234,159 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1090847624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1090847627}
+  - component: {fileID: 1090847626}
+  - component: {fileID: 1090847625}
+  - component: {fileID: 1090847628}
+  m_Layer: 0
+  m_Name: Square
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1090847625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090847624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53eee28d6c4c047e6bd3a70e8739cf44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightBoundary: 7.32
+  leftBoundary: -7.32
+  moveSpeed: 10
+--- !u!212 &1090847626
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090847624}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1090847627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090847624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.03, y: 4.41, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1090847628
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090847624}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
+--- !u!1 &1503702261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1503702262}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1503702262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503702261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.3, y: 5.02, z: -0.083888255}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1628583313
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +595,7 @@ GameObject:
   - component: {fileID: 1788594462}
   - component: {fileID: 1788594461}
   - component: {fileID: 1788594463}
+  - component: {fileID: 1788594464}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Untagged
@@ -579,12 +733,12 @@ MonoBehaviour:
     m_Name: Horizontal Movement
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 7672eb82-62bc-4e1c-b96a-11d014e1a6de
+    m_Id: 5d05451f-8356-482b-8130-101b5d06e3aa
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
-    - m_Name: Sideways
-      m_Id: ec70276d-d16c-45ae-8da3-258d1a9cf068
+    - m_Name: SideMovement
+      m_Id: 245ed8a8-c64a-46db-adfb-4a30650e2292
       m_Path: 1DAxis
       m_Interactions: 
       m_Processors: 
@@ -592,7 +746,7 @@ MonoBehaviour:
       m_Action: Horizontal Movement
       m_Flags: 4
     - m_Name: negative
-      m_Id: 61b0044d-081f-4b99-8e99-a5c928247d70
+      m_Id: fc3c4da9-c290-4618-9ec2-0a449d06ce5a
       m_Path: <Keyboard>/a
       m_Interactions: 
       m_Processors: 
@@ -600,7 +754,7 @@ MonoBehaviour:
       m_Action: Horizontal Movement
       m_Flags: 8
     - m_Name: positive
-      m_Id: 0e1a5686-6730-4899-ac84-270bee3f7757
+      m_Id: f1bc79fa-d41b-4080-aebd-03e174b0b1fd
       m_Path: <Keyboard>/d
       m_Interactions: 
       m_Processors: 
@@ -609,7 +763,30 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
   rb: {fileID: 1788594461}
-  moveForce: 10
+  moveSpeed: 10
+--- !u!114 &1788594464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788594458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a825d58916a9f4fe298c0f3913236fc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalMovement:
+    m_Name: Horizontal Movement
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: c5b2616b-97fd-4889-90bb-0e1b2b3ce373
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  rb: {fileID: 0}
+  moveSpeed: 0
 --- !u!1 &2040619443
 GameObject:
   m_ObjectHideFlags: 0
