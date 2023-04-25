@@ -16,6 +16,10 @@ public class FallingObstacleSpawner : MonoBehaviour
     [SerializeField]
     private int moveSpeed;//a speed to move the spawner
 
+    [SerializeField]
+    private List<GameObject> fallingObjects;//A list of objects to spawn. 
+
+
     private void Start()
     {
         flip = 1; 
@@ -24,7 +28,28 @@ public class FallingObstacleSpawner : MonoBehaviour
     // Update is called once per frame
     protected void Update()
     {
+        SpawnerMovement();
 
+
+        
+
+    }
+
+    //FlipMovement() determines when to flip the direction of the spawner.
+    private void FlipMovement()
+    {
+        if (hasHitWall == true)
+        {
+            flip = 1;
+        }
+        else
+        {
+            flip = -1;
+        }
+    }
+
+    private void SpawnerMovement()
+    {
         //floating behavior:
         if (transform.position.x >= rightBoundary)
         {
@@ -44,22 +69,6 @@ public class FallingObstacleSpawner : MonoBehaviour
         {
             transform.Translate(flip * moveSpeed * Time.deltaTime, 0f, 0f);
 
-        }
-
-
-
-    }
-
-    //FlipMovement() determines when to flip the direction of the spawner.
-    private void FlipMovement()
-    {
-        if (hasHitWall == true)
-        {
-            flip = 1;
-        }
-        else
-        {
-            flip = -1;
         }
     }
 }
