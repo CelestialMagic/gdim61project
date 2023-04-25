@@ -19,6 +19,11 @@ public class FallingObstacleSpawner : MonoBehaviour
     [SerializeField]
     private List<GameObject> fallingObjects;//A list of objects to spawn. 
 
+    [SerializeField]
+    private float resetTimer;
+
+    [SerializeField]
+    private float countdownTimer; 
 
     private void Start()
     {
@@ -29,7 +34,7 @@ public class FallingObstacleSpawner : MonoBehaviour
     protected void Update()
     {
         SpawnerMovement();
-
+        CountdownSpawn(); 
 
         
 
@@ -68,6 +73,23 @@ public class FallingObstacleSpawner : MonoBehaviour
         else
         {
             transform.Translate(flip * moveSpeed * Time.deltaTime, 0f, 0f);
+
+        }
+    }
+
+    //CountdownSpawn() 
+    private void CountdownSpawn()
+    {
+        if(countdownTimer - Time.deltaTime <= 0)
+        {
+            countdownTimer = resetTimer;
+            GameObject randomObject = fallingObjects[Random.Range(0, fallingObjects.Count)];
+            randomObject.gameObject.transform.position = new Vector2 (this.gameObject.transform.position.x, this.gameObject.transform.position.y);
+            Instantiate(randomObject);
+        }
+        else
+        {
+            countdownTimer -= Time.deltaTime;
 
         }
     }

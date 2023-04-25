@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 1090847625}
   - component: {fileID: 1090847628}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,6 +268,10 @@ MonoBehaviour:
   rightBoundary: 7.32
   leftBoundary: -7.32
   moveSpeed: 10
+  fallingObjects:
+  - {fileID: 9117916361496617420, guid: 361a7cb207a9b4e3b9773860a46d5383, type: 3}
+  resetTimer: 2
+  countdownTimer: 2
 --- !u!212 &1090847626
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -484,7 +488,7 @@ GameObject:
   - component: {fileID: 1679557803}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: FallBarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -598,7 +602,7 @@ GameObject:
   - component: {fileID: 1788594464}
   m_Layer: 0
   m_Name: Dog
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
