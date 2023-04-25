@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
 
     protected Vector2 applyToMove;//Stores movement
 
+    [SerializeField]
+    private ScoreTracker scoreTracker; 
+
     //Enables player movement
     protected void OnEnable()
     {
@@ -44,7 +47,13 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "TennisBall")
+        {
+            scoreTracker.IncreaseScore();
+        }
+    }
 
 
 
