@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TennisBallGame.unity
     guid: 6bfdac29096aa46e1a0e4856876d362d
+  - enabled: 1
+    path: Assets/Scenes/HowtoPlay.unity
+    guid: ce135d162d9ec9d4fa45d9747904b1f8
   m_configObjects: {}

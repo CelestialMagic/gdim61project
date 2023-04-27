@@ -7,20 +7,27 @@ public class SceneSwap : MonoBehaviour
 {
 
     [SerializeField]
-private string gameMenu;
+    private string gameMenu;
 
-[SerializeField]
-private string tennisGame;
+    [SerializeField]
+    private string tennisGame;
 
-[SerializeField]
-private string diggingGame;
+    [SerializeField]
+    private string diggingGame;
 
-public void LoadGameMenu()
-{
-    SceneManager.LoadScene(gameMenu);
-}
-public void LoadTennisGame()
-{
-    SceneManager.LoadScene(tennisGame);
-}
+    [SerializeField]
+    private string howToPlay;
+
+    public void LoadGameMenu()
+    {
+      SceneManager.LoadScene(gameMenu);
+    }
+    public void LoadTennisGame()
+    {
+        SceneManager.LoadScene(tennisGame);
+    }
+    public void LoadTutorial()
+    {
+        SceneManager.LoadScene(howToPlay);
+    }
 }
