@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TennisBall
   - FallBarrier
+  - Obstacle
   layers:
   - Default
   - TransparentFX

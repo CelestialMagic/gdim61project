@@ -53,9 +53,16 @@ public class PlayerMovement : MonoBehaviour
         {
             scoreTracker.IncreaseScore();
         }
+        else if(collision.gameObject.tag == "Obstacle")
+        {
+            scoreTracker.DecreaseScore();
+        }
     }
 
-
+    public void StopMovement()
+    {
+        moveSpeed = 0;
+    }
 
 
 }

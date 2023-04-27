@@ -31,7 +31,8 @@ public class LevelTimer : MonoBehaviour
     {
         if ((levelTime - Time.deltaTime) <= 0)
         {
-
+            player.StopMovement();
+            spawner.ToggleActive(false);
         }
         else
         {

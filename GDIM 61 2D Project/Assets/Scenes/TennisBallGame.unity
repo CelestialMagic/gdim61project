@@ -511,8 +511,10 @@ MonoBehaviour:
   moveSpeed: 10
   fallingObjects:
   - {fileID: 9117916361496617420, guid: 361a7cb207a9b4e3b9773860a46d5383, type: 3}
+  - {fileID: 7846595183329987783, guid: e5be82c152bac0646a388c644e81921e, type: 3}
   resetTimer: 2
   countdownTimer: 2
+  timeBuffer: 0.5
 --- !u!212 &1090847626
 SpriteRenderer:
   m_ObjectHideFlags: 0

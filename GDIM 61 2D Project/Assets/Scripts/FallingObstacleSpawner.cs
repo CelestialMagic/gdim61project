@@ -23,19 +23,27 @@ public class FallingObstacleSpawner : MonoBehaviour
     private float resetTimer;
 
     [SerializeField]
-    private float countdownTimer; 
+    private float countdownTimer;
+
+    [SerializeField]
+    private float timeBuffer;
+
+    private bool isActive;
 
     private void Start()
     {
-        flip = 1; 
+        flip = 1;
+        isActive = true;
     }
 
     // Update is called once per frame
     protected void Update()
     {
-        SpawnerMovement();
-        CountdownSpawn(); 
-
+        if (isActive)
+        {
+            SpawnerMovement();
+            CountdownSpawn();
+        }
         
 
     }
@@ -82,7 +90,7 @@ public class FallingObstacleSpawner : MonoBehaviour
     {
         if(countdownTimer - Time.deltaTime <= 0)
         {
-            countdownTimer = resetTimer;
+            countdownTimer = Random.Range(resetTimer - timeBuffer, resetTimer + timeBuffer);
             GameObject randomObject = fallingObjects[Random.Range(0, fallingObjects.Count)];
             randomObject.gameObject.transform.position = new Vector2 (this.gameObject.transform.position.x, this.gameObject.transform.position.y);
             Instantiate(randomObject);
@@ -92,5 +100,9 @@ public class FallingObstacleSpawner : MonoBehaviour
             countdownTimer -= Time.deltaTime;
 
         }
+    }
+    public void ToggleActive(bool status)
+    {
+        isActive = status;
     }
 }
