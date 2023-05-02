@@ -193,6 +193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 390225494}
+  - component: {fileID: 390225495}
   m_Layer: 0
   m_Name: GameFrame
   m_TagString: Untagged
@@ -219,6 +220,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &390225495
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390225493}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!4 &444869838 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3862430851673675143, guid: 35bfed3e021904118b42644f0003980c, type: 3}
@@ -414,6 +441,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1813277697}
   - component: {fileID: 1813277696}
+  - component: {fileID: 1813277698}
+  - component: {fileID: 1813277700}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -488,6 +517,108 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1813277698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813277695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d40632c42d4b2ea12fc59ef054318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalMovement:
+    m_Name: Horizontal Movement
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 177f6f06-32f9-41cf-8409-108c2eb833f8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: Left-Right
+      m_Id: 8b7b5f27-19d3-4d15-a46d-f65972629f8f
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Horizontal Movement
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 557783a7-7df6-4831-bdea-eeaa24bd2d0c
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Horizontal Movement
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 34b3728c-afcd-44c8-b3f0-141721f39913
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Horizontal Movement
+      m_Flags: 8
+    m_Flags: 0
+  rb: {fileID: 0}
+  moveSpeed: 10
+  scoreTracker: {fileID: 0}
+  verticalMovement:
+    m_Name: Vertical Movement
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 977bfa67-cf4a-41b2-9ee7-c2229502a1f8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: Up-Down
+      m_Id: 4fc1b7d7-9229-4434-87e0-ac51c3500752
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Vertical Movement
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: a3ce07c9-cd21-4bd7-b0b5-c68c80a3b49c
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Vertical Movement
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 00eb47e6-f11e-4bef-b6d9-3467fc7500cd
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Vertical Movement
+      m_Flags: 8
+    m_Flags: 0
+--- !u!50 &1813277700
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813277695}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!4 &1849647031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3862430851673675143, guid: 35bfed3e021904118b42644f0003980c, type: 3}

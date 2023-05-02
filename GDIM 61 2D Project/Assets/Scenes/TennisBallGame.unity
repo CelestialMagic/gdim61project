@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc168bf9e6e374ed5b56157b56dd880b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTime: 30
+  levelTime: 3
   player: {fileID: 1788594463}
   spawner: {fileID: 1090847625}
   timeDisplay: {fileID: 1256745971}
@@ -1015,19 +1015,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1788594458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a825d58916a9f4fe298c0f3913236fc2, type: 3}
+  m_Script: {fileID: 11500000, guid: 35b42dc549e1b49748cdf6b6e6a224fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalMovement:
     m_Name: Horizontal Movement
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 5d05451f-8356-482b-8130-101b5d06e3aa
+    m_Id: 9217389d-69b2-4974-bcbb-3921cfe0dd51
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
-    - m_Name: SideMovement
-      m_Id: 245ed8a8-c64a-46db-adfb-4a30650e2292
+    - m_Name: SideMove
+      m_Id: 432e6b01-c942-4f4b-9ff0-fd2a31c261f1
       m_Path: 1DAxis
       m_Interactions: 
       m_Processors: 
@@ -1035,7 +1035,7 @@ MonoBehaviour:
       m_Action: Horizontal Movement
       m_Flags: 4
     - m_Name: negative
-      m_Id: fc3c4da9-c290-4618-9ec2-0a449d06ce5a
+      m_Id: 83bece20-32a6-4c1d-9f35-531e83f37e5a
       m_Path: <Keyboard>/a
       m_Interactions: 
       m_Processors: 
@@ -1043,7 +1043,7 @@ MonoBehaviour:
       m_Action: Horizontal Movement
       m_Flags: 8
     - m_Name: positive
-      m_Id: f1bc79fa-d41b-4080-aebd-03e174b0b1fd
+      m_Id: 11622a55-e5fa-4998-8bde-041f92b43be7
       m_Path: <Keyboard>/d
       m_Interactions: 
       m_Processors: 

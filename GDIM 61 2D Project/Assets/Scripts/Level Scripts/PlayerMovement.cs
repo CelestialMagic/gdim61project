@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public abstract class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
     protected InputAction horizontalMovement;//A set of bindings for moving left to right
+
+
 
     [SerializeField]
     protected Rigidbody2D rb;//The object's rigidbody, for movement force
@@ -17,16 +19,16 @@ public class PlayerMovement : MonoBehaviour
     protected Vector2 applyToMove;//Stores movement
 
     [SerializeField]
-    private ScoreTracker scoreTracker; 
+    protected ScoreTracker scoreTracker; 
 
     //Enables player movement
-    protected void OnEnable()
+    protected virtual void OnEnable()
     {
         horizontalMovement.Enable();
     }
 
     //Disables player movement
-    protected void OnDisable()
+    protected virtual void OnDisable()
     {
         horizontalMovement.Disable();
     }
@@ -39,15 +41,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //A template movement method for players 
-    protected virtual void Movement()
-    {
-        float horizontalInput = horizontalMovement.ReadValue<float>();
-        applyToMove = new Vector2(horizontalInput * moveSpeed * Time.deltaTime, 0);
-        transform.Translate(applyToMove, Space.World);
+    protected abstract void Movement();
 
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "TennisBall")
         {
@@ -58,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
             scoreTracker.DecreaseScore();
         }
     }
-
+    //StopMovement() stops the player's movement
     public void StopMovement()
     {
         moveSpeed = 0;

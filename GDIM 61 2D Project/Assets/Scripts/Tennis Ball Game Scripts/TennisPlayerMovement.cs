@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class TennisPlayerMovement : MonoBehaviour
+public class TennisPlayerMovement : PlayerMovement
 {
-    // Start is called before the first frame update
-    void Start()
+    //Defines movement for sidescrolling player
+    protected override void Movement()
     {
-        
+        float horizontalInput = horizontalMovement.ReadValue<float>();
+        applyToMove = new Vector2(horizontalInput * moveSpeed * Time.deltaTime, 0);
+        transform.Translate(applyToMove, Space.World);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
