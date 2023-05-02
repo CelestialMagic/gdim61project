@@ -607,6 +607,7 @@ GameObject:
   - component: {fileID: 1813277697}
   - component: {fileID: 1813277696}
   - component: {fileID: 1813277698}
+  - component: {fileID: 1813277699}
   - component: {fileID: 1813277700}
   m_Layer: 0
   m_Name: Player
@@ -763,6 +764,32 @@ MonoBehaviour:
       m_Action: Vertical Movement
       m_Flags: 8
     m_Flags: 0
+--- !u!61 &1813277699
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813277695}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!50 &1813277700
 Rigidbody2D:
   serializedVersion: 4
@@ -778,12 +805,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!4 &1849647031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3862430851673675143, guid: 35bfed3e021904118b42644f0003980c, type: 3}
@@ -825,7 +852,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.23427472, g: 0.7830189, b: 0.1071111, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
