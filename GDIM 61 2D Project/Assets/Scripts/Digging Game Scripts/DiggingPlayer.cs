@@ -10,6 +10,8 @@ public class DiggingPlayer : PlayerMovement
 
     private bool inRange;
 
+    private int testScore;
+
     //Enables player movement
     protected override void OnEnable()
     {
@@ -32,10 +34,15 @@ public class DiggingPlayer : PlayerMovement
 
         applyToMove = new Vector2(horizontalInput * moveSpeed * Time.deltaTime, verticalInput * moveSpeed * Time.deltaTime);
         transform.Translate(applyToMove, Space.World);
+        if (Input.GetKeyDown(KeyCode.E) && (inRange)) 
+        {
+            testScore++;
+            Debug.Log(testScore);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Treasure")
+        if(collision.gameObject.tag == "Dig Site")
         {
             inRange = true;
             Debug.Log(inRange);

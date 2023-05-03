@@ -8,6 +8,7 @@ TagManager:
   - FallBarrier
   - Obstacle
   - Treasure
+  - Dig Site
   layers:
   - Default
   - TransparentFX
