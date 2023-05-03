@@ -7,6 +7,7 @@ TagManager:
   - TennisBall
   - FallBarrier
   - Obstacle
+  - Treasure
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,7 @@ public class DiggingPlayer : PlayerMovement
     [SerializeField]
     private InputAction verticalMovement;//A set of bindings for moving up and down.
 
+    private bool inRange;
 
     //Enables player movement
     protected override void OnEnable()
@@ -31,5 +32,18 @@ public class DiggingPlayer : PlayerMovement
 
         applyToMove = new Vector2(horizontalInput * moveSpeed * Time.deltaTime, verticalInput * moveSpeed * Time.deltaTime);
         transform.Translate(applyToMove, Space.World);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Treasure")
+        {
+            inRange = true;
+            Debug.Log(inRange);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        inRange = false;
+        Debug.Log(inRange);
     }
 }
