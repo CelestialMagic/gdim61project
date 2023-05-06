@@ -36,7 +36,7 @@ public class DiggingPlayer : PlayerMovement
         transform.Translate(applyToMove, Space.World);
         if (Input.GetKeyDown(KeyCode.E) && (inRange)) 
         {
-            testScore++;
+            scoreTracker.IncreaseScore();
             Debug.Log(testScore);
         }
     }
@@ -48,6 +48,7 @@ public class DiggingPlayer : PlayerMovement
             Debug.Log(inRange);
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         inRange = false;
