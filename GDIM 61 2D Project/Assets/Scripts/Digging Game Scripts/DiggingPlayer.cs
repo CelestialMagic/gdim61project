@@ -36,7 +36,7 @@ public class DiggingPlayer : PlayerMovement
 
         applyToMove = new Vector2(horizontalInput * moveSpeed * Time.deltaTime, verticalInput * moveSpeed * Time.deltaTime);
         transform.Translate(applyToMove, Space.World);
-        if (Input.GetKeyDown(KeyCode.E) && (inRange)) 
+        if (Input.GetKeyDown(KeyCode.Space) && (inRange)) 
         {
             scoreTracker.IncreaseScore();
             Debug.Log(testScore);
