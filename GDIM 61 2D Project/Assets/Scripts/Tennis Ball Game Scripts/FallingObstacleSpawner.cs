@@ -20,15 +20,15 @@ public class FallingObstacleSpawner : MonoBehaviour
     private List<GameObject> fallingObjects;//A list of objects to spawn. 
 
     [SerializeField]
-    private float resetTimer;
+    private float resetTimer;//A time to reset
 
     [SerializeField]
-    private float countdownTimer;
+    private float countdownTimer;//A timer to count down
 
     [SerializeField]
-    private float timeBuffer;
+    private float timeBuffer;//A buffer time
 
-    private bool isActive;
+    private bool isActive;//The state of the objects 
 
     private void Start()
     {
@@ -101,6 +101,8 @@ public class FallingObstacleSpawner : MonoBehaviour
 
         }
     }
+
+    //Toggles the status of spawner 
     public void ToggleActive(bool status)
     {
         isActive = status;

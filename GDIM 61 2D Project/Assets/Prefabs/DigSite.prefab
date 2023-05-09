@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1287030651947727673}
   - component: {fileID: 4384854731747574866}
+  - component: {fileID: 151136013327586131}
   m_Layer: 0
   m_Name: DigSite
-  m_TagString: Untagged
+  m_TagString: Dig Site
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,4 +45,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69f1ec8e439cd485192ea66268d325c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTreasure: {fileID: 0}
   site: {fileID: 1287030651947727678}
+--- !u!58 &151136013327586131
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287030651947727678}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

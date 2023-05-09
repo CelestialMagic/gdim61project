@@ -614,6 +614,8 @@ MonoBehaviour:
   - {fileID: 1716937156}
   buriedTreasure:
   - {fileID: 9178468874162550894, guid: 0973e7702b43c7e429a3bc2386e419fd, type: 3}
+  resetTimer: 0.2
+  countdownTimer: 0.2
 --- !u!212 &857762919
 SpriteRenderer:
   m_ObjectHideFlags: 0

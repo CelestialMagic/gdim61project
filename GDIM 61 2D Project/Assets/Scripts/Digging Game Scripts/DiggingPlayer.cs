@@ -8,6 +8,8 @@ public class DiggingPlayer : PlayerMovement
     [SerializeField]
     private InputAction verticalMovement;//A set of bindings for moving up and down.
 
+    private DigSite currentDigSite;
+
     private bool inRange;
 
     private int testScore;
@@ -38,17 +40,23 @@ public class DiggingPlayer : PlayerMovement
         {
             scoreTracker.IncreaseScore();
             Debug.Log(testScore);
+            currentDigSite.DestroyTreasure();
         }
     }
+
+    //OnTriggerEnter2D() detects if player enters a dig site
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Dig Site")
         {
             inRange = true;
             Debug.Log(inRange);
+            currentDigSite = collision.gameObject.GetComponent<DigSite>();
+
         }
     }
 
+    //OnTriggerExit() determines if player left the spot 
     private void OnTriggerExit2D(Collider2D collision)
     {
         inRange = false;
