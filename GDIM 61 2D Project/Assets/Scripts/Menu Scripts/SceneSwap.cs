@@ -26,6 +26,10 @@ public class SceneSwap : MonoBehaviour
     {
         SceneManager.LoadScene(tennisGame);
     }
+    public void LoadDiggingGame()
+    {
+        SceneManager.LoadScene(diggingGame);
+    }
     public void LoadTutorial()
     {
         SceneManager.LoadScene(howToPlay);
