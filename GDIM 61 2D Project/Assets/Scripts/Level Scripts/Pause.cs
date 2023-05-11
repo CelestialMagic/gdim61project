@@ -11,7 +11,8 @@ public class Pause : MonoBehaviour
 
     private void Start()
     {
-        isPaused = false; 
+        isPaused = false;
+        Time.timeScale = 1; 
     }
 
     private void Update()
