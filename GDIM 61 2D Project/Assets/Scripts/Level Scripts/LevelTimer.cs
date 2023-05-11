@@ -7,11 +7,11 @@ public class LevelTimer : MonoBehaviour
 {
     //The global timer for the scene
     [SerializeField]
-    private float levelTime;
+    protected float levelTime;
 
     //The player in the scene
     [SerializeField]
-    private PlayerMovement player;
+    protected PlayerMovement player;
 
     //The spawner in the scene
     [SerializeField]
@@ -19,15 +19,15 @@ public class LevelTimer : MonoBehaviour
 
     //Text display of level timer
     [SerializeField]
-    private Text timeDisplay;
+    protected Text timeDisplay;
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         Countdown();
     }
 
-    private void Countdown()
+    protected virtual void Countdown()
     {
         if ((levelTime - Time.deltaTime) <= 0)
         {
