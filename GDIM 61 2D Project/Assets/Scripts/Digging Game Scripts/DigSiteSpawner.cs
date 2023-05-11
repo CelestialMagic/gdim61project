@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DigSiteSpawner : MonoBehaviour
+public class DigSiteSpawner : Spawner
 {
     [SerializeField]
     private List<DigSite> digSites;//The available dig sites 
@@ -10,17 +10,11 @@ public class DigSiteSpawner : MonoBehaviour
     [SerializeField]
     private List<GameObject> buriedTreasure;//A list of treasures to spawn
 
-
-    [SerializeField]
-    private float resetTimer;//A timer to reset
-
-    [SerializeField]
-    private float countdownTimer;//A timer to count down
-
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        Countdown();
+        if(isActive)
+        CountdownSpawn();
     }
 
     //Spawns Spots for the player to dig at.
@@ -44,7 +38,7 @@ public class DigSiteSpawner : MonoBehaviour
     }
 
     //Countdown() is responsible for determining when to spawn next. 
-    private void Countdown()
+    protected override void CountdownSpawn()
     {
         if (countdownTimer - Time.deltaTime <= 0)
         {

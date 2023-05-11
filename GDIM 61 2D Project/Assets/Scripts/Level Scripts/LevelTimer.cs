@@ -15,7 +15,7 @@ public class LevelTimer : MonoBehaviour
 
     //The spawner in the scene
     [SerializeField]
-    private FallingObstacleSpawner spawner;
+    private Spawner spawner;
 
     //Text display of level timer
     [SerializeField]

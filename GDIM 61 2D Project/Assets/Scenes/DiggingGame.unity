@@ -913,6 +913,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 159aa786071fb42fcbe08875d6dcb19c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetTimer: 0.2
+  countdownTimer: 0.2
   digSites:
   - {fileID: 983586237}
   - {fileID: 1188738742}
@@ -924,8 +926,6 @@ MonoBehaviour:
   - {fileID: 638771559}
   buriedTreasure:
   - {fileID: 9178468874162550894, guid: 0973e7702b43c7e429a3bc2386e419fd, type: 3}
-  resetTimer: 0.2
-  countdownTimer: 0.2
 --- !u!212 &857762919
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1037,9 +1037,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c002f3b0d8e56b46a7ae61ce3bdbdf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTime: 30
+  levelTime: 3
   player: {fileID: 816901953}
-  spawner: {fileID: 0}
+  spawner: {fileID: 857762918}
   timeDisplay: {fileID: 987021385}
 --- !u!114 &928617740 stripped
 MonoBehaviour:

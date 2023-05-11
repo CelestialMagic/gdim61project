@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FallingObstacleSpawner : MonoBehaviour
+public class FallingObstacleSpawner : Spawner
 {
     [SerializeField] //float representing right-most side 
     private float rightBoundary;
@@ -20,24 +20,16 @@ public class FallingObstacleSpawner : MonoBehaviour
     private List<GameObject> fallingObjects;//A list of objects to spawn. 
 
     [SerializeField]
-    private float resetTimer;//A time to reset
-
-    [SerializeField]
-    private float countdownTimer;//A timer to count down
-
-    [SerializeField]
     private float timeBuffer;//A buffer time
 
-    private bool isActive;//The state of the objects 
-
-    private void Start()
+    protected override void Start()
     {
         flip = 1;
         isActive = true;
     }
 
     // Update is called once per frame
-    protected void Update()
+    protected override void Update()
     {
         if (isActive)
         {
@@ -86,7 +78,7 @@ public class FallingObstacleSpawner : MonoBehaviour
     }
 
     //CountdownSpawn() 
-    private void CountdownSpawn()
+    protected override void CountdownSpawn()
     {
         if(countdownTimer - Time.deltaTime <= 0)
         {
@@ -103,8 +95,5 @@ public class FallingObstacleSpawner : MonoBehaviour
     }
 
     //Toggles the status of spawner 
-    public void ToggleActive(bool status)
-    {
-        isActive = status;
-    }
+
 }
