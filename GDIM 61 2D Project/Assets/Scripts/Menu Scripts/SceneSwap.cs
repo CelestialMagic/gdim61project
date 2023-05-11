@@ -34,4 +34,8 @@ public class SceneSwap : MonoBehaviour
     {
         SceneManager.LoadScene(howToPlay);
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

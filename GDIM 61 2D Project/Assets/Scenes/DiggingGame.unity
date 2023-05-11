@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c002f3b0d8e56b46a7ae61ce3bdbdf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTime: 3
+  levelTime: 30
   player: {fileID: 816901953}
   spawner: {fileID: 857762918}
   timeDisplay: {fileID: 987021385}
@@ -1292,11 +1292,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1287030651947727673, guid: a87d711566e35495caea9e6f1cd31c42, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.7
+      value: -6.99
       objectReference: {fileID: 0}
     - target: {fileID: 1287030651947727673, guid: a87d711566e35495caea9e6f1cd31c42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.99
+      value: -3.68
       objectReference: {fileID: 0}
     - target: {fileID: 1287030651947727673, guid: a87d711566e35495caea9e6f1cd31c42, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1625,6 +1625,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35bfed3e021904118b42644f0003980c, type: 3}
+--- !u!1 &1428591930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1428591932}
+  - component: {fileID: 1428591931}
+  m_Layer: 0
+  m_Name: Pause
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1428591931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428591930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4455bb014f3262c41905928136fea9ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1428591932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428591930}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 529.324, y: 249.93964, z: -2.3022718}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1499829332
 GameObject:
   m_ObjectHideFlags: 0
@@ -2096,7 +2140,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.9636126
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

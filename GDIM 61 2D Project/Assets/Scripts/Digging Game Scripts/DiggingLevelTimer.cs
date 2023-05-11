@@ -5,12 +5,6 @@ using UnityEngine.UI;
 
 public class DiggingLevelTimer : LevelTimer
 {
-    // Update is called once per frame
-    void Update()
-    {
-        Countdown();
-    }
-
     protected override void Countdown()
     {
         if ((levelTime - Time.deltaTime) <= 0)
