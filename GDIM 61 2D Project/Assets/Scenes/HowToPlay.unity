@@ -422,7 +422,7 @@ MonoBehaviour:
   m_text: 'Digging Game
 
     Move your dog using WASD. When you reach a dig spot,
-    hit spacebar to dig! '
+    press Space to dig! '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -779,7 +779,7 @@ MonoBehaviour:
   m_text: 'Tennis Ball Game
 
     Control your dog using the A and D keys! Collect
-    tennis balls, and avoid obstacles!'
+    tennis balls and avoid obstacles!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
