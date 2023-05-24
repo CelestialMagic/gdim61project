@@ -39,7 +39,6 @@ public class DiggingPlayer : PlayerMovement
         if (Input.GetKeyDown(KeyCode.Space) && (inRange)) 
         {
             scoreTracker.IncreaseScore();
-            Debug.Log(testScore);
             currentDigSite.DestroyTreasure();
         }
     }
@@ -50,7 +49,6 @@ public class DiggingPlayer : PlayerMovement
         if(collision.gameObject.tag == "Dig Site")
         {
             inRange = true;
-            Debug.Log(inRange);
             currentDigSite = collision.gameObject.GetComponent<DigSite>();
 
         }
@@ -60,6 +58,5 @@ public class DiggingPlayer : PlayerMovement
     private void OnTriggerExit2D(Collider2D collision)
     {
         inRange = false;
-        Debug.Log(inRange);
     }
 }

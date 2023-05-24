@@ -21,6 +21,9 @@ public class LevelTimer : MonoBehaviour
     [SerializeField]
     protected Text timeDisplay;
 
+    [SerializeField]
+    protected GameObject endMenu;
+
     // Update is called once per frame
     protected void Update()
     {
@@ -29,10 +32,15 @@ public class LevelTimer : MonoBehaviour
 
     protected virtual void Countdown()
     {
-        if ((levelTime - Time.deltaTime) <= 0)
+        if ((int)(levelTime - Time.deltaTime) <= 0)
         {
+            Debug.Log("Spawner off");
+            Debug.Log(endMenu); 
+            endMenu.SetActive(true);
+            Debug.Log(endMenu);
             player.StopMovement();
             spawner.ToggleActive(false);
+            
         }
         else
         {
