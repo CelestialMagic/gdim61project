@@ -10,6 +10,7 @@ public class DiggingLevelTimer : LevelTimer
         if ((levelTime - Time.deltaTime) <= 0)
         {
             player.StopMovement();
+            endMenu.SetActive(true);
         }
         else
         {
