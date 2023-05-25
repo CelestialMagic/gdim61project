@@ -1383,7 +1383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c002f3b0d8e56b46a7ae61ce3bdbdf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTime: 3
+  levelTime: 15
   player: {fileID: 816901953}
   spawner: {fileID: 857762918}
   timeDisplay: {fileID: 987021385}

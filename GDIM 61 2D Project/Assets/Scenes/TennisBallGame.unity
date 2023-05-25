@@ -505,7 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc168bf9e6e374ed5b56157b56dd880b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTime: 30
+  levelTime: 15
   player: {fileID: 1788594463}
   spawner: {fileID: 1090847625}
   timeDisplay: {fileID: 1256745971}
